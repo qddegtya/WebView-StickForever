@@ -1,4 +1,11 @@
 # WebView-StickForever
-let element stick to the bottom or top in webview
+Make element truely Fixed in webview
 
-# How to use
+# Why use it?
+
+
+# Easy to use
+
+```javascript
+StickForever(document.getElementById('scroll-body')).stick();
+```
