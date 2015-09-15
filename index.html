@@ -1,74 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
+    <meta charset="UTF-8">
     <title>Webview-stickforever by qddegtya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <a id="forkme_banner" href="https://github.com/qddegtya/WebView-StickForever">View on GitHub</a>
-    <div class="shell">
+    <section class="page-header">
+      <h1 class="project-name">Webview-stickforever</h1>
+      <h2 class="project-tagline">Make element truely Fixed in webview</h2>
+      <a href="https://github.com/qddegtya/WebView-StickForever" class="btn">View on GitHub</a>
+      <a href="https://github.com/qddegtya/WebView-StickForever/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/qddegtya/WebView-StickForever/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Webview-stickforever</h1>
-            <h2>let element stick to the bottom or top in webview</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <section class="main-content">
+      <h3>
+<a id="webview-stickforever" class="anchor" href="#webview-stickforever" aria-hidden="true"><span class="octicon octicon-link"></span></a>WebView-StickForever</h3>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/qddegtya/WebView-StickForever/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/qddegtya/WebView-StickForever/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+<p>Make element truely Fixed in webview
+使得页面某元素在IOS webview中真正"Fixed"，提升用户体验</p>
 
+<h3>
+<a id="why-use-it" class="anchor" href="#why-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why use it?</h3>
 
-      <span class="banner-fix"></span>
+<p>Hybrid页面开发中，为了提升用户体验，我们通常在ios中使用-webkit-overflow-scrolling加速滚动。
+与此同时我们不希望下面的某个fixed层受webview回弹的影响</p>
 
+<h3>
+<a id="easy-to-use" class="anchor" href="#easy-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Easy to use</h3>
 
-      <section id="main_content">
-        <h1>
-<a id="webview-stickforever" class="anchor" href="#webview-stickforever" aria-hidden="true"><span class="octicon octicon-link"></span></a>WebView-StickForever</h1>
+<ol>
+<li>在容器外面包裹一个滚动层</li>
+</ol>
 
-<p>let element stick to the bottom or top in webview</p>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>scroll-body<span class="pl-pds">"</span></span>&gt;
+  <span class="pl-c">&lt;!-- your code --&gt;</span>
+&lt;/<span class="pl-ent">div</span>&gt;        </pre></div>
 
-<h1>
-<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h1>
-      </section>
+<ol>
+<li>给滚动层设置加速样式</li>
+</ol>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/qddegtya">qddegtya</a> can be found on <a href="https://github.com/qddegtya/WebView-StickForever">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+<div class="highlight highlight-source-css"><pre><span class="pl-e">#scroll-body</span>{
+    <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">100<span class="pl-k">%</span></span>;
+    <span class="pl-c1"><span class="pl-c1">position</span></span>: <span class="pl-c1">absolute</span>;
+    <span class="pl-c1"><span class="pl-c1">height</span></span>: <span class="pl-c1">100<span class="pl-k">%</span></span>;
+    <span class="pl-c1"><span class="pl-c1">bottom</span></span>: <span class="pl-c1">0</span>;
+    <span class="pl-c1"><span class="pl-c1">left</span></span>: <span class="pl-c1">0</span>;
+    <span class="pl-c1"><span class="pl-c1">overflow-y</span></span>: <span class="pl-c1">auto</span>;
+    <span class="pl-c1">-webkit-<span class="pl-c1">overflow</span>-scrolling</span>: touch;
+    <span class="pl-c1"><span class="pl-c1">padding-bottom</span></span>: <span class="pl-c1">135<span class="pl-k">px</span></span>;
+}</pre></div>
+
+<ol>
+<li>启用StickForever</li>
+</ol>
+
+<div class="highlight highlight-source-js"><pre>StickForever(<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>scroll-body<span class="pl-pds">'</span></span>)).stick();</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/qddegtya/WebView-StickForever">Webview-stickforever</a> is maintained by <a href="https://github.com/qddegtya">qddegtya</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
 
-    </div>
+    </section>
 
-    
+  
   </body>
 </html>
