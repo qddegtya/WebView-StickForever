@@ -23,27 +23,26 @@
 		// top
 		if(_currentScrollTop === 0) {
 			_ele.scrollTop = _currentScrollTop + 1;
-
 		// bottom
 		} else if(_currentScrollTop === _bottomFaVal) {
 			_ele.scrollTop = _currentScrollTop - 1;
 		} else {
 			return;
 		}
-    }
+    	}
 	
 	StickForever.prototype.stick = function() {
 		// store handler
 		var _handler = this._stickScrollOnIOS;
 		
 		// stick it!
-        this.ele.addEventListener('touchstart', _handler);
+        	this.ele.addEventListener('touchstart', _handler);
 		
-        // if device is android
+        	// if device is android
 		// remove the eventlistener
-        if(/android/i.test(window.navigator.userAgent)) {
-            this.ele.removeEventListener('touchstart', _handler);
-        }
+        	if(/android/i.test(window.navigator.userAgent)) {
+            		this.ele.removeEventListener('touchstart', _handler);
+        	}
 		
 		return this;
 	};
