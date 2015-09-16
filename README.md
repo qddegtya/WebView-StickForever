@@ -6,7 +6,7 @@ Make element truely Fixed in webview
 ### Why use it?
 
 Hybrid页面开发中，为了提升用户体验，我们通常在ios中使用-webkit-overflow-scrolling加速滚动。
-与此同时我们不希望下面的某个fixed层受webview回弹的影响
+与此同时我们不希望下面的某个fixed层受webview回弹的影响。
 
 ### Easy to use
 
@@ -29,6 +29,8 @@ Hybrid页面开发中，为了提升用户体验，我们通常在ios中使用-w
     left: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    
+    /* your style */
     padding-bottom: 135px;
 }
 ```
