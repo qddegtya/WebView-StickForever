@@ -1,12 +1,12 @@
 ### WebView-StickForever
 
 Make element truely Fixed in webview
-使得页面某元素在IOS webview中真正"Fixed"，提升用户体验
+使得页面某元素在 IOS webview 中真正 "Fixed"，提升用户体验
 
 ### Why use it?
 
-Hybrid页面开发中，为了提升用户体验，我们通常在ios中使用-webkit-overflow-scrolling加速滚动。
-与此同时我们不希望下面的某个fixed层受webview回弹的影响。
+Hybrid 页面开发中，为了提升用户体验，我们通常在 io s中使用 `-webkit-overflow-scrolling` 加速滚动。
+与此同时我们不希望下面的某个 fixed 层受 webview 回弹的影响。
 
 ### Easy to use
 
@@ -35,7 +35,7 @@ Hybrid页面开发中，为了提升用户体验，我们通常在ios中使用-w
 }
 ```
 
-**step 3 启用StickForever**
+**step 3 启用 StickForever**
 
 ```javascript
 StickForever(document.getElementById('scroll-body')).stick();
